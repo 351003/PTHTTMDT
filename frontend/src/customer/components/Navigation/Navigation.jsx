@@ -239,8 +239,8 @@ import { getUSer, logout } from "../../../State/Auth/Action";
 const navigation = [
   { name: "Trang chủ", href: "/", current: false },
   { name: "Sản phẩm", href: "/products", current: false },
-  { name: "Bộ sưu tập", href: "/collections", current: false },
-  { name: "Về chúng tôi", href: "/about", current: false },
+  { name: "Bộ sưu tập", href: "/#newCollections", current: false },
+  { name: "Về chúng tôi", href: "/#about", current: false },
 ];
 
 function classNames(...classes) {
@@ -306,7 +306,7 @@ export default function Navigation() {
                     {navigation.map((item) => (
                       <button
                         key={item.name}
-                        onClick={() => navigate(item.href)}
+                        onClick={() => window.location.replace(item.href)}
                         className={classNames(
                           location.pathname === item.href
                             ? "bg-gray-50 text-indigo-600"
@@ -469,7 +469,7 @@ export default function Navigation() {
                   <Disclosure.Button
                     key={item.name}
                     as="button"
-                    onClick={() => navigate(item.href)}
+                    onClick={() => window.location.replace(item.href)}
                     className={classNames(
                       location.pathname === item.href
                         ? "bg-indigo-50 text-indigo-600"

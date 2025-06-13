@@ -119,7 +119,7 @@ const navigate = useNavigate();
     }, [dispatch]);
 
     return (
-        <div style={styles.sectionContainer}>
+        <div id={sectionName === 'Bộ sưu tập mới' ? 'newCollections' : ''} style={styles.sectionContainer}>
             <div style={styles.container}>
                 <h2 style={styles.sectionTitle}>{sectionName}</h2>
                 <div style={styles.productGrid}>

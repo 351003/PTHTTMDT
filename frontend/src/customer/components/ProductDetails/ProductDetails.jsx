@@ -381,7 +381,8 @@ console.log("kkkkkkkkkkkkk similarProducts:", product);
                 Mô tả sản phẩm
               </button>
              
-              <button className="py-4 px-1 border-b-2 font-medium text-sm border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300">
+              <button className="py-4 px-1 border-b-2 font-medium text-sm border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+                onClick={() => window.location.replace(window.location + '#review')}>
                 Đánh giá ({review?.reviews?.length || 0})
               </button>
             </nav>
@@ -399,7 +400,7 @@ console.log("kkkkkkkkkkkkk similarProducts:", product);
         </section>
 
         {/* Reviews Section */}
-        <section className="mt-16">
+        <section id='review' className="mt-16">
           <h1 className="font-semibold text-xl pb-4 text-gray-900">ĐÁNH GIÁ SẢN PHẨM</h1>
           <div className="border border-gray-200 rounded-lg p-6">
             <ReviewForm productId={params} />
